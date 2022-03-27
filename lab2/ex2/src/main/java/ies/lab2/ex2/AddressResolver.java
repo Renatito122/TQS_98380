@@ -13,10 +13,10 @@ import java.util.Locale;
 
 public class AddressResolver {
 
-    private TqsHttpClient httpClient;
+    private ISimpleHttpClient SimpleHttpClient;
 
-    public AddressResolver(TqsHttpClient httpClient) {
-        this.httpClient = httpClient;
+    public AddressResolver(ISimpleHttpClient SimpleHttpClient) {
+        this.SimpleHttpClient = SimpleHttpClient;
     }
 
 
@@ -32,7 +32,7 @@ public class AddressResolver {
 
         System.err.println(" url is --> " + uriBuilder.build().toString() + " <--");
 
-        String response = this.httpClient.get(uriBuilder.build().toString());
+        String response = this.SimpleHttpClient.doHttpGet(uriBuilder.build().toString());
 
         System.out.println("JSON is: >" + response + "<");
 

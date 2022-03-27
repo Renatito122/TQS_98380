@@ -1,8 +1,10 @@
-package ies.lab2.ex2;
+package ies.lab2.ex2.ex3;
 
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ies.lab2.ex2.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -16,8 +18,8 @@ public class AddressLocationIT {
 
     @BeforeEach
     public void init(){
-        TqsHttpClient httpClient = new TqsHttpBasic();
-        resolver = new AddressResolver(httpClient);
+        ISimpleHttpClient SimpleHttpClient = new TqsBasicHttpClient();
+        resolver = new AddressResolver(SimpleHttpClient);
     }
 
     @Test

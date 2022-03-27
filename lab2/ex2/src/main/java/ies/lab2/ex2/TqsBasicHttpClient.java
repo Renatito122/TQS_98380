@@ -8,10 +8,10 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
-public class tqsHttpBasicClient implements tqsHttpSimpleClient {
-    
+public class TqsBasicHttpClient implements ISimpleHttpClient {
+
     @Override
-    public String get(String url) throws IOException {
+    public String doHttpGet(String url) throws IOException {
         CloseableHttpClient client = HttpClients.createDefault();
         HttpGet request = new HttpGet(url);
         CloseableHttpResponse response = client.execute(request);

@@ -1,24 +1,32 @@
 package ies.lab2.ex2;
 
+import java.util.Objects;
+
 public class Address {
 
     private String road;
     private String city;
     private String state;
-    private String zip;
+    private String zio;
     private String houseNumber;
 
-    public Address (String road, String city, String state, String zip, String houseNumber){
+    public Address (String road, String city, String state, String zio, String houseNumber){
         this.road=road;
         this.city=city;
         this.state=state;
-        this.zip=zip;
+        this.zio=zio;
         this.houseNumber=houseNumber;
     }
 
     @Override
     public String toString() {
-        return "Address{" + "road=" + road + ", city=" + city + ", state=" + state + ", zip=" + zip + ", houseNumber=" + houseNumber + '}';
+        return "Address{" + "road=" + road + ", city=" + city + ", state=" + state + ", zip=" + zio + ", houseNumber=" + houseNumber + '}';
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(road, city, state, zio, houseNumber);
     }
 
     @Override
@@ -42,7 +50,7 @@ public class Address {
         if (!Objects.equals(this.state, other.state)) {
             return false;
         }
-        if (!Objects.equals(this.zip, other.zip)) {
+        if (!Objects.equals(this.zio, other.zio)) {
             return false;
         }
         if (!Objects.equals(this.houseNumber, other.houseNumber)) {
