@@ -1,0 +1,77 @@
+{
+  "id": "88a236f0-6f9e-4065-bd00-ee5c9fba7af9",
+  "version": "2.0",
+  "name": "COVIData2",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "312df2ab-7666-4d58-ad81-1a1deb47b11d",
+    "name": "COVIData2",
+    "commands": [{
+      "id": "4dff47dc-fa8c-46c5-99bd-5a89ebd93337",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef2846cd-0cf2-4311-a062-e8a69017da03",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x985",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4853a2f5-f6b4-4b0c-b786-fcc9dad2a4b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=COVID Data by Country",
+      "targets": [
+        ["linkText=COVID Data by Country", "linkText"],
+        ["css=.col-lg-4:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'COVID Data by Country')]", "xpath:link"],
+        ["xpath=//section[@id='features']/div/div[2]/div/div/h3/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'by-country')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'COVID Data by Country')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cac77ae-2811-4e99-8755-0f9582998c1c",
+      "comment": "",
+      "command": "click",
+      "target": "id=select2-country-container",
+      "targets": [
+        ["id=select2-country-container", "id"],
+        ["css=#select2-country-container", "css:finder"],
+        ["xpath=//span[@id='select2-country-container']", "xpath:attributes"],
+        ["xpath=//section[@id='hero']/div/div/div/form/div/span/span/span/span", "xpath:idRelative"],
+        ["xpath=//span/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1cf185c-55ab-4aba-bc30-fa69675f49a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='hero']/div/div/div/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "42b6f37b-2bf4-4447-8bea-c0cf6f160b12",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["312df2ab-7666-4d58-ad81-1a1deb47b11d"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

@@ -1,4 +1,4 @@
-package tqs.homework.COVIData_project.controller;
+package tqs.homework.COVIData_project.controller.api;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -27,9 +27,7 @@ public class CountryRestController {
 
     @GetMapping("/all")
     public ArrayList<Country> getAllCountries() throws IOException, URISyntaxException, InterruptedException {
-        System.out.println("AAAAa");
         ArrayList<Country> countries = this.service.getAllCountries();
-        System.out.println(countries);
         if (countries == null) {
             return null;
         }

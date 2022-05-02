@@ -2,15 +2,12 @@ package tqs.homework.COVIData_project.model;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class Country  {
 
     @Id
@@ -18,8 +15,21 @@ public class Country  {
     private String name;
     private String text;
     private String continent;
-    private Long population;
-    private COVIData data;
+    private Integer population;
+
+
+    public Country(String id, String name, String text, String continent, Integer population) {
+        this.id = id;
+        this.name = name;
+        this.text = text;
+        this.continent = continent;
+        this.population = population;
+    }
+
+
+    public Country() {
+    }
+
 
     @Override
     public String toString() {
@@ -29,7 +39,6 @@ public class Country  {
             ", text='" + getText() + "'" +
             ", continent='" + getContinent() + "'" +
             ", population='" + getPopulation() + "'" +
-            ", data='" + getData() + "'" +
             "}";
     }
     

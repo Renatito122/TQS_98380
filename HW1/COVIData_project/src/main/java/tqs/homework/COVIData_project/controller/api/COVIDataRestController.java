@@ -1,4 +1,4 @@
-package tqs.homework.COVIData_project.controller;
+package tqs.homework.COVIData_project.controller.api;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,20 +21,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class COVIDataRestController {
 
     @Autowired
-    public COVIDataService service;
+    public COVIDataService covidataService;
 
     @Autowired
     public HandlingRequestsService handler;
 
-
-    @GetMapping("/world")
-    public ArrayList<COVIData> getWorldStatistics() throws ResourceNotFoundException, IOException, URISyntaxException, InterruptedException {
-        return service.getStatisticsData("");
-    }
-
-    @GetMapping("/{iso}")
-    public ArrayList<COVIData> getCountriesStatistics(@PathVariable String iso) throws ResourceNotFoundException, IOException, URISyntaxException, InterruptedException {
-        return service.getStatisticsData(iso);
+    @GetMapping("/{countryId}")
+    public ArrayList<COVIData> getCountriesStatistics(@PathVariable String countryId) throws ResourceNotFoundException, IOException, URISyntaxException, InterruptedException {
+        return covidataService.getCurrentCovidData(countryId);
     }
 
     

@@ -64,7 +64,6 @@ public class HandlingRequestsService {
         for(int i = 0; i < jsonArray.length(); i++) {
             JSONObject objectJSON =  (JSONObject) jsonArray.get(i);
             String c = objectJSON.get("Country").toString();
-            System.out.println(c);
             countries.add(c);
         }
         return countries;

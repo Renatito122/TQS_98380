@@ -1,4 +1,4 @@
-package tqs.homework.COVIData_project.controller;
+package tqs.homework.COVIData_project.controller.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
